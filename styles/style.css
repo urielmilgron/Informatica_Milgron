@@ -1,0 +1,35 @@
+.iconos{
+    width: 40px;
+}
+ul{
+    width: 95%;
+    
+}
+.nav-item{
+    width: 210px;
+}
+#navSecundario{
+    background-color:rgb(83, 83, 83);
+}
+#navPrimario{
+background-color: rgb(56, 56, 56);
+}
+input{
+    border-radius: 5%;
+}
+#main{
+    background-image: url("../assets/img/Fondo4.jpg");
+    display: flex;  
+    height: auto;
+    width: auto; 
+    justify-content: center;
+    align-items: center;
+}
+#mainContenido{
+    background-color: rgba(44, 44, 44, 0.507);
+    width: 95%;
+}
+
+footer{
+    background-color: black;
+}
