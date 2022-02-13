@@ -13,48 +13,99 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <header>
+    <header id="navPrimario" class="navbar navbar-light">
       <!-- Primer nav de inicio -->
-      <div>
-        <div><img src="../assets/img/imgLogo.png" alt="Logo" /></div>
-        <div><input type="search" /></div>
-        <div><img src="../assets/img/Carrito.png" alt="Carrito" /></div>
-        <div>
-          <img src="../assets/img/InicioSesion.png" alt="Inicio de sesión" />
+      <div class="container col-12">
+        <div class="navbar-brand col-2">
+          <a href=""
+            ><img
+              src="../assets/img/imgLogo.png"
+              class="iconos rounded mx-auto d-block"
+              alt="Logo"
+          /></a>
+        </div>
+        <div class="navbar-brand col-2"><input type="search" /></div>
+        <div class="navbar-brand col-2">
+          <a href=""
+            ><img
+              src="../assets/img/Carrito.png"
+              class="iconos rounded mx-auto d-block"
+              alt="Carrito"
+          /></a>
+        </div>
+        <div class="navbar-brand col-2">
+          <a href="">
+            <img
+              src="../assets/img/InicioSesion.png"
+              class="iconos rounded mx-auto d-block"
+              alt="Inicio de sesión"
+          /></a>
         </div>
       </div>
     </header>
-    <!-- Nav secundario -->
-    <nav>
-      <div>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
-          <li><a href="pcarmadas.html">PC Armadas</a></li>
-          <li><a href="combos.html">Combos</a></li>
-          <li><a href="accesorios.html">Accesorios</a></li>
-          <li><a href="quienessomos.html">¿Quienes somos?</a></li>
-        </ul>
-      </div>
+    <nav id="navSecundario" class="navbar justify-content-center navbar-light">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link text-center text-light"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="productos.html" class="nav-link text-center text-light"
+            >Productos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="pcarmadas.html" class="nav-link text-center text-light"
+            >PC Armadas</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="combos.html" class="nav-link text-center text-light"
+            >Combos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="accesorios.html"
+            class="nav-link text-center text-light"
+            >Accesorios</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            href="quienessomos.html"
+            class="nav-link text-center text-light"
+            >¿Quienes somos?</a
+          >
+        </li>
+      </ul>
     </nav>
-    <!-- Fin de nav -->
-
-    <!-- Inicio de main -->
-    <div>
-      <div></div>
+    <div id="main">
+      <div class="row gy-5" id="mainContenido">
+        <div class="container">
+          <div class="row row-cols">
+            <div>
+              <p class="text-light fs-4 mt-5 ms-5">Accesorios</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>
-      <div>
-        <div></div>
-        <div>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+    <footer class="justify-content-center mh-50">
+      <nav class="navbar navbar-expand-lg navbar-light h-50">
+        <div class="container-fluid justify-content-center"><p class="text-secondary mb-lg-0">Horarios: 09 a 19 hs.</p></div>
+        <div class="collapse navbar-collapse justify-content-center" >
+          <ul class="navbar-nav mb-lg-0">
+            <li class="nav-item"><a href="" class="nav-link active text-center text-white">Facebook</a></li>
+            <li class="nav-item"><a href="" class="nav-link active text-center text-white">Twitter</a></li>
+            <li class="nav-item"><a href="" class="nav-link active text-center text-white">Instagram</a></li>
           </ul>
         </div>
-        <div></div>
+        <div class="container-fluid justify-content-center">
+        <p class="text-secondary mb-lg-0">Atención al cliente: +54929753232326</p>
       </div>
+    </nav>
     </footer>
   </body>
 </html>
