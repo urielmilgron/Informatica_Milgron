@@ -12,7 +12,7 @@
 
 
 
-.iconos{
+/* .iconos{
     width: 40px;
 }
 ul{
@@ -52,10 +52,10 @@ footer{
 }
 .ms-5--modified{
 margin-left: 115px;
-}
+} */
 
 /* Efectos/transiciones/transformaciones */
-.card{
+/* .card{
     background-color: rgba(128, 128, 128, 0.514);
     transition: all .2s;
 }
@@ -95,4 +95,125 @@ iframe:hover{
 }
 .card-title, .card-text{
 color: rgb(0, 0, 0);
+} */
+/* mobile First */
+/* mobile First */
+/* mobile First */
+
+
+.iconos{
+    width: 40px; 
+    height: 40px;
+}
+header{
+    background-color: rgba(121, 120, 120, 0.493);
+}
+.navMaster{
+    width: 1200px;
+}
+.nav-item, .formItem{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#main{
+    background-image: url("../assets/img/Fondo4.jpg");
+    display: flex;  
+    height: auto;
+    width: auto; 
+    justify-content: center;
+    align-items: center;
+}
+.mainContenido{
+    background-color: rgba(44, 44, 44, 0.507);
+
+    width: 95%;
+}
+.imageBanner img{
+    width: 100%;
+    height: 10%;
+}
+.categorias{
+    margin-top: 20px;
+    color: rgb(218, 218, 218);
+}
+.mainCards{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario{
+    background-color: rgba(114, 114, 114, 0.082);
+    border-radius: 10%;
+}
+iframe, .videos{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+iframe{
+    width: 300px;
+    height: 200px;
+}
+.card{
+    margin-top: 20px;
+    width: 15.5rem;
+    height: 500px;
+    margin-bottom: 20px;
+    background-color: rgba(75, 75, 75, 0.452);
+}
+.imagen{
+    height: 180px;
+    display: flex;
+    vertical-align:middle;
+}
+.card-text{
+    color: rgba(218, 218, 218, 0.76);
+}
+.btn{
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+footer{
+    background-color: rgb(26, 26, 26);
+}
+@media screen and (min-width: 768px){
+    .mainCards{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    iframe{
+        width: 220px;
+        height: 220px;
+    }
+    .card{
+
+        width: 15.5rem;
+        height: 30rem;
+
+    }
+}
+@media screen and (min-width: 1024px){
+.card{
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+    width: 14rem;
+}
+iframe{
+    width: 310px;
+    height: 230px;
+}
+}
+@media screen and (min-width: 1280px){
+    .card{
+        width: 15.5rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    iframe{
+        width: 360px;
+        height: 240px;
+    }
 }

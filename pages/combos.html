@@ -13,217 +13,195 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <header id="navPrimario" class="navbar navbar-light">
-      <!-- Primer nav de inicio -->
-      <div class="container col-12">
-        <div class="navbar-brand col-2">
-          <a href=""
-            ><img
-              src="../assets/img/imgLogo.png"
-              class="iconos rounded mx-auto d-block"
-              alt="Logo"
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Menú nav modificado-->
+        <div class="container-fluid navMaster">
+          <a class="navbar-brand" href="../index.html"
+            ><img src="../assets/img/imgLogo.png" class="iconos" alt=""
           /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-around"
+            id="navbarNav"
+          >
+            <!-- Buscador -->
+            <form class="d-flex formItem">
+              <input
+                class="form-control me-2 input"
+                type="search"
+                placeholder="Buscar producto"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+            <!-- Ya no hay más 2 nav, se unifico todo en uno -->
+            <ul id="nav" class="navbar-nav">
+              <!-- El nav con las categorias ahora es un item más con menú desplegable -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="../index.html">Inicio</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="productos.html">Productos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pcarmadas.html"
+                      >PC Armadas</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="combos.html">Combos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="accesorios.html"
+                      >Accesorios</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="quienessomos.html"
+                      >¿Quienes somos?</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Carrito</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Inicio sesión
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                  <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="navbar-brand col-2"><input type="search" /></div>
-        <div class="navbar-brand col-2">
-          <a href=""
-            ><img
-              src="../assets/img/Carrito.png"
-              class="iconos rounded mx-auto d-block"
-              alt="Carrito"
-          /></a>
-        </div>
-        <div class="navbar-brand col-2">
-          <a href="">
-            <img
-              src="../assets/img/InicioSesion.png"
-              class="iconos rounded mx-auto d-block"
-              alt="Inicio de sesión"
-          /></a>
-        </div>
-      </div>
+      </nav>
     </header>
-    <nav id="navSecundario" class="navbar justify-content-center navbar-light">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a href="../index.html" class="navegacion nav-link text-center text-light"
-            >Inicio</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="productos.html" class="nav-link text-center text-light"
-            >Productos</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="pcarmadas.html" class="nav-link text-center text-light"
-            >PC Armadas</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="combos.html" class="nav-link text-center text-light"
-            >Combos</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="accesorios.html" class="nav-link text-center text-light"
-            >Accesorios</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="quienessomos.html" class="nav-link text-center text-light"
-            >¿Quienes somos?</a
-          >
-        </li>
-      </ul>
-    </nav>
     <div id="main">
-      <div class="row gy-5" id="mainContenido">
-        <div class="container mb-5">
-          <div class="row row-cols">
-            <div>
-              <p class="encabezados text-light fs-4 mt-5 ms-5--modified">Combos</p>
+      <div class="mainContenido text-center">
+        <h4 class="categorias">Combos</h4>
+        <div class="mainCards">
+          
+          <div class="card">
+            <div class="imagen">
+            <img src="../assets/img/Combo 1.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">
+                Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
+              </p>
+              <p class="card-text">$50000</p>
+              <p class="badge bg-secondary">En stock</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
           </div>
-          <!-- Sería como el container de todos los productos -->
-          <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
-            <div class="col">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
+          <div class="card">
+            <div class="imagen">
+            <img src="../assets/img/Combo 2.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">
+                Combo Intel i3 + 4GB RAM + Mother Gigabyte H410M-H
+              </p>
+              <p class="card-text">$35000</p>
+              <p class="badge bg-secondary">En stock</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="col align-items-center">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
+          </div>
+          <div class="card">
+            <div class="imagen">
+            <img src="../assets/img/Combo 3.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">
+                Combo Intel i7 + 16GB RAM + Mother Aorus Z490
+              </p>
+              <p class="card-text">$70000</p>
+              <p class="badge bg-secondary">Sin stock</p>
+              <a href="#" class="btn btn-primary disabled"
+                >Agregar al carrito</a
+              >
+              <a href="#" class="btn btn-primary disabled">Comprar</a>
             </div>
-            <div class="col">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
+          </div>
+          <div class="card">
+            <!-- Le agrego un div con class imagen para que las cards esten proporcionadas -->
+            <div class="imagen">
+            <img src="../assets/img/Combo 4.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">
+                Combo Intel i7 + 8GB RAM + Mother Gigabyte H470M
+              </p>
+              <p class="card-text">$58000</p>
+              <p class="badge bg-secondary">En stock</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="col">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
+          </div>
+          <div class="card">
+            <div class="imagen">
+            <img src="../assets/img/Combo 5.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">
+                Combo Ryzen 3 + 8GB RAM + Mother Gigabyte + SSD 240GB + Nvidia
+              </p>
+              <p class="card-text">$65000</p>
+              <p class="badge bg-secondary">En stock</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="col">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
+          </div>
+          <div class="card">
+            <div class="imagen">
+            <img src="../assets/img/Combo 6.png" class="card-img-top" alt="" />
+          </div>
+            <div class="card-body">
+              <p class="card-text">Combo Ryzen 3 3200G + Mother Msi</p>
+              <p class="card-text">$30000</p>
+              <p class="badge bg-secondary">En stock</p>
+              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
-            <div class="col">
-              <!-- En el div card va cada producto -->
-              <div class="card text-center h-100 w-50 ms-5--modified">
-                <!-- Primero la imagen -->
-                <img
-                  src="../assets/img/Combo 1.png"
-                  class="card-img-top"
-                  alt=""
-                />
-                <!-- Luego el cuerpo del producto -->
-                <div class="card-body">
-                  <!-- Acá va el título -->
-                  <h5 class="card-title">
-                    Combo Intel i5 + 8GB RAM + Mother Gigabyte H410M-H
-                  </h5>
-                  <p class="card-text">$50000</p>
-                  <p class="badge bg-secondary">En stock</p>
-                  <a href="#" class="btn btn-primary mt-2">Agregar al carrito</a>
-                  <a href="#" class="btn btn-primary mt-2">Comprar</a>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
           </div>
         </div>
       </div>
@@ -239,7 +217,7 @@
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
-                class="nav-link active text-center text-white"
+                class="nav-link active text-center text-secondary"
                 >Facebook</a
               >
             </li>
@@ -247,7 +225,7 @@
               <a
                 href="https://twitter.com/"
                 target="_blank"
-                class="nav-link active text-center text-white"
+                class="nav-link active text-center text-secondary"
                 >Twitter</a
               >
             </li>
@@ -255,7 +233,7 @@
               <a
                 href="https://www.instagram.com/?hl=es-la"
                 target="_blank"
-                class="nav-link active text-center text-white"
+                class="nav-link active text-center text-secondary"
                 >Instagram</a
               >
             </li>
