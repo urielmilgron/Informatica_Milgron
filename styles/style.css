@@ -93,6 +93,10 @@ iframe,
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.divRedes{
+  display: flex;
+  justify-content: center;
+}
 .redes {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -217,5 +221,13 @@ footer {
   #linkIndex{
     margin-top: 20px;
    margin-bottom: 20px;
+  }
+  .redes {
+    height: 50px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 35px;
+    margin-bottom: 35px;
   }
 }
