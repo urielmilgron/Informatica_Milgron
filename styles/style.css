@@ -210,4 +210,12 @@ footer {
   .mapsIframe {
     width: 380px;
   }
+  .videosIframe {
+    width: 360px;
+    height: 290px;
+  }
+  #linkIndex{
+    margin-top: 20px;
+   margin-bottom: 20px;
+  }
 }
