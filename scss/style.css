@@ -13710,6 +13710,14 @@ header .navMaster .iconos {
   height: 40px;
 }
 
+.nav-item,
+.formItem {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 /* Main con imagen de fondo */
 #main {
   background-image: url("../assets/img/Fondo4.jpg");
