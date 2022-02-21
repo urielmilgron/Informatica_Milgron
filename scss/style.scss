@@ -12,6 +12,21 @@
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 
+
+// Clases globales
+.nav-item,
+.formItem {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.iconos {
+  width: 40px;
+  height: 40px;
+}
+
+
 header {
   background-color: rgba(121, 120, 120, 0.493);
   .navMaster {
@@ -22,13 +37,7 @@ header {
     }
   }
 }
-.nav-item,
-.formItem {
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
+
 
 /* Main con imagen de fondo */
 #main {
@@ -41,10 +50,7 @@ header {
   .mainContenido {
     background-color: rgba(44, 44, 44, 0.507);
     width: 95%;
-    .iconos {
-      width: 40px;
-      height: 40px;
-    }
+
     .imageBanner {
       img {
         width: 100%;
@@ -212,13 +218,13 @@ footer {
   }
   #main {
     .mainContenido {
+      .categorias:hover {
+        letter-spacing: 2px;
+      }
       .mainCards {
         .videosIframe {
           width: 340px;
           height: 250px;
-        }
-        .categorias:hover {
-          letter-spacing: 2px;
         }
         .card:hover {
           background-color: rgba(77, 76, 76, 0.932);
@@ -253,14 +259,14 @@ footer {
           width: 360px;
           height: 290px;
         }
-        .redes {
-          height: 50px;
-          width: 400px;
-          display: flex;
-          justify-content: space-evenly;
-          margin-top: 35px;
-          margin-bottom: 35px;
-        }
+      }
+      .redes {
+        height: 50px;
+        width: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 35px;
+        margin-bottom: 35px;
       }
     }
   }

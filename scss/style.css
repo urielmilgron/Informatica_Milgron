@@ -13697,6 +13697,19 @@ progress {
   white-space: nowrap;
 }
 
+.nav-item,
+.formItem {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.iconos {
+  width: 40px;
+  height: 40px;
+}
+
 header {
   background-color: rgba(121, 120, 120, 0.493);
 }
@@ -13708,14 +13721,6 @@ header .navMaster {
 header .navMaster .iconos {
   width: 40px;
   height: 40px;
-}
-
-.nav-item,
-.formItem {
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 /* Main con imagen de fondo */
@@ -13739,11 +13744,6 @@ header .navMaster .iconos {
   width: 95%;
   /* Encabezados */
   /* Contenedores de las cards */
-}
-
-#main .mainContenido .iconos {
-  width: 40px;
-  height: 40px;
 }
 
 #main .mainContenido .imageBanner img {
@@ -13930,12 +13930,12 @@ footer #contact a:active {
   header:hover {
     background-color: rgba(146, 146, 146, 0.493);
   }
+  #main .mainContenido .categorias:hover {
+    letter-spacing: 2px;
+  }
   #main .mainContenido .mainCards .videosIframe {
     width: 340px;
     height: 250px;
-  }
-  #main .mainContenido .mainCards .categorias:hover {
-    letter-spacing: 2px;
   }
   #main .mainContenido .mainCards .card:hover {
     background-color: rgba(77, 76, 76, 0.932);
@@ -13970,7 +13970,7 @@ footer #contact a:active {
     width: 360px;
     height: 290px;
   }
-  #main .mainContenido .mainCards .redes {
+  #main .mainContenido .redes {
     height: 50px;
     width: 400px;
     display: -webkit-box;
