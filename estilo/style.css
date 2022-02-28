@@ -1,0 +1,291 @@
+.nav-item,
+.formItem {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.iconos {
+  width: 40px;
+  height: 40px;
+}
+
+header {
+  background-color: rgba(121, 120, 120, 0.493);
+}
+
+header .navMaster {
+  width: 1200px;
+}
+
+header .navMaster .iconos {
+  width: 40px;
+  height: 40px;
+}
+
+/* Main con imagen de fondo */
+#main {
+  background-image: url("../assets/img/Fondo4.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .mainContenido {
+  background-color: rgba(44, 44, 44, 0.507);
+  width: 95%;
+  /* Encabezados */
+  /* Contenedores de las cards */
+}
+
+#main .mainContenido .imageBanner img {
+  width: 100%;
+  height: 10%;
+}
+
+#main .mainContenido .categorias {
+  margin-top: 20px;
+  color: #dadada;
+}
+
+#main .mainContenido .mainCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#main .mainContenido .mainCards .card {
+  margin-top: 20px;
+  width: 15.5rem;
+  height: 480px;
+  margin-bottom: 20px;
+  background-color: rgba(75, 75, 75, 0.452);
+}
+
+#main .mainContenido .mainCards .card .card-text {
+  color: rgba(189, 189, 189, 0.856);
+  height: 90px;
+}
+
+#main .mainContenido .mainCards .card .precio {
+  height: 20px;
+}
+
+#main .mainContenido .mainCards .card .imagen {
+  min-height: 160px;
+  min-width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+}
+
+#main .mainContenido .mainCards .card .imagen img {
+  height: 150px;
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+}
+
+#main .mainContenido .mainCards .card .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#main .mainContenido .mainCards .formulario {
+  background-color: rgba(114, 114, 114, 0.082);
+  border-radius: 10%;
+}
+
+#main .mainContenido .mainCards .videosIframe {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 260px;
+  height: 250px;
+}
+
+#main .mainContenido .divRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .mainContenido .divRedes .redes {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+footer #contact a {
+  margin-bottom: 10px;
+  border-radius: 10%;
+  background-color: rgba(146, 146, 146, 0.137);
+}
+
+footer #contact a:active {
+  background-color: rgba(204, 204, 204, 0.137);
+}
+
+/* Media query ipad */
+@media screen and (min-width: 768px) {
+  #main .mainContenido .mainCards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main .mainContenido .mainCards .videosIframe {
+    width: 600px;
+    height: 420px;
+  }
+  #main .mainContenido .mainCards .mapsIframe {
+    width: 270px;
+    height: 200px;
+  }
+  #main .mainContenido .mainCards .card {
+    width: 11rem;
+  }
+}
+
+/* Media query dispositivos 800px hasta 1024px */
+@media screen and (min-width: 800px) {
+  #main .mainContenido .mainCards .card {
+    width: 12rem;
+  }
+  #main .mainContenido .mainCards .mapsIframe {
+    width: 280px;
+    height: 210px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main .mainContenido .mainCards .mapsIframe {
+    width: 290px;
+    height: 220px;
+  }
+  #main .mainContenido .mainCards .card {
+    width: 14rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  #main .mainContenido .mainCards .videosIframe {
+    width: 300px;
+    height: 220px;
+  }
+  #contact {
+    display: none;
+  }
+}
+
+/* Transiciones */
+/* Transiciones */
+/* Transiciones a partir de dispositivos de 1200px (Desktops o notebooks) */
+@media screen and (min-width: 1200px) {
+  .card,
+  .categorias,
+  header,
+  footer,
+  .footerLinks,
+  iframe,
+  .iconos {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  header:hover {
+    background-color: rgba(146, 146, 146, 0.493);
+  }
+  #main .mainContenido .categorias:hover {
+    letter-spacing: 2px;
+  }
+  #main .mainContenido .mainCards .videosIframe {
+    width: 340px;
+    height: 250px;
+  }
+  #main .mainContenido .mainCards .card:hover {
+    background-color: rgba(77, 76, 76, 0.932);
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  #main .mainContenido .mainCards iframe:hover {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  footer:hover {
+    background-color: #2e2e2e;
+  }
+  .footerLinks:hover {
+    color: antiquewhite !important;
+    text-shadow: 0px 0px 1px #ffffffc9;
+  }
+  .iconos:hover {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #main .mainContenido {
+    width: 1200px;
+  }
+  #main .mainContenido .mainCards .mapsIframe {
+    width: 380px;
+  }
+  #main .mainContenido .mainCards .videosIframe {
+    width: 360px;
+    height: 290px;
+  }
+  #main .mainContenido .redes {
+    height: 50px;
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  #linkIndex {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
