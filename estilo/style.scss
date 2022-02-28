@@ -1,262 +1,249 @@
+@mixin tipoDisplay ($display, $justifyContent) {
+  display: $display;
+  justify-content: $justifyContent;
+}
+@mixin tamano ($width, $height){
+  width: $width;
+  height: $height;
+}
+@mixin topBottom ($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+//MAP
+$tamanosGenerales: (header:1200px, tamanoDifUsos:20px);
 // Clases globales
 .nav-item,
 .formItem {
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-left: 25px;
-  padding-right: 25px;
+margin-left: map-get($tamanosGenerales,tamanoDifUsos);
+margin-right: map-get($tamanosGenerales,tamanoDifUsos);
+padding-left: 25px;
+padding-right: 25px;
 }
 .iconos {
-  width: 40px;
-  height: 40px;
+@include tamano(40px,40px);
 }
 
 
 header {
-  background-color: rgba(121, 120, 120, 0.493);
-  .navMaster {
-    width: 1200px;
-    .iconos {
-      width: 40px;
-      height: 40px;
-    }
-  }
+background-color: rgba(121, 120, 120, 0.493);
+.navMaster {
+  width: map-get($tamanosGenerales,header);
+}
 }
 
 
 /* Main con imagen de fondo */
 #main {
-  background-image: url("../assets/img/Fondo4.jpg");
-  display: flex;
-  height: auto;
-  width: auto;
-  justify-content: center;
-  align-items: center;
-  .mainContenido {
-    background-color: rgba(44, 44, 44, 0.507);
-    width: 95%;
+background-image: url("../assets/img/Fondo4.jpg");
+@include tipoDisplay(flex,center);
+@include topBottom(auto,auto);
+align-items: center;
+.mainContenido {
+  background-color: rgba(44, 44, 44, 0.507);
+  width: 95%;
 
-    .imageBanner {
-      img {
-        width: 100%;
-        height: 10%;
+  .imageBanner {
+    img {
+        @include tamano(100%,10% );
+    }
+  }
+  /* Encabezados */
+  .categorias {
+    margin-top: map-get($tamanosGenerales,tamanoDifUsos);
+    color: rgb(218, 218, 218);
+  }
+  /* Contenedores de las cards */
+  .mainCards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include topBottom(10px,10px);
+    .card {
+        @include tamano(15.5rem,480px);
+        @include topBottom(20px,20px);
+      background-color: rgba(75, 75, 75, 0.452);
+      .card-text {
+        color: rgba(189, 189, 189, 0.856);
+        height: 90px;
       }
-    }
-    /* Encabezados */
-    .categorias {
-      margin-top: 20px;
-      color: rgb(218, 218, 218);
-    }
-    /* Contenedores de las cards */
-    .mainCards {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      .card {
-        margin-top: 20px;
-        width: 15.5rem;
-        height: 480px;
-        margin-bottom: 20px;
-        background-color: rgba(75, 75, 75, 0.452);
-        .card-text {
-          color: rgba(189, 189, 189, 0.856);
-          height: 90px;
-        }
-        .precio {
-          height: 20px;
-        }
-        .imagen {
-          min-height: 160px;
-          min-width: 160px;
+      .precio {
+        height: map-get($tamanosGenerales,tamanoDifUsos);
+      }
+      .imagen {
+        @include tipoDisplay(flex,center);
+        min-height: 160px;
+        min-width: 160px;
+        vertical-align: middle;
+        img {
+          @include tamano(170px,150px);
           display: flex;
-          justify-content: center;
           vertical-align: middle;
-          img {
-            height: 150px;
-            width: 170px;
-            display: flex;
-            vertical-align: middle;
-          }
-        }
-        .btn {
-          margin-top: 5px;
-          margin-bottom: 5px;
         }
       }
-      .formulario {
-        background-color: rgba(114, 114, 114, 0.082);
-        border-radius: 10%;
-      }
-      .videosIframe {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: 260px;
-        height: 250px;
+      .btn {
+      @include topBottom(5px,5px);
       }
     }
-    .divRedes {
-      display: flex;
-      justify-content: center;
-      .redes {
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
+    .formulario {
+      background-color: rgba(114, 114, 114, 0.082);
+      border-radius: 10%;
+    }
+    .videosIframe {
+        @include tamano(260px,250px);
+        @include topBottom(10px,10px);
+    }
+  }
+  .divRedes {
+      @include tipoDisplay(flex,center);
+    .redes {
+        @include topBottom(10px,10px);
     }
   }
 }
+}
 footer {
-  background-color: rgb(26, 26, 26);
-  #contact {
-    a {
-      margin-bottom: 10px;
-      border-radius: 10%;
-      background-color: rgba(146, 146, 146, 0.137);
-      &:active {
-        background-color: rgba(204, 204, 204, 0.137);
-      }
+background-color: rgb(26, 26, 26);
+#contact {
+  a {
+    margin-bottom: 10px;
+    border-radius: 10%;
+    background-color: rgba(146, 146, 146, 0.137);
+    &:active {
+      background-color: rgba(204, 204, 204, 0.137);
     }
   }
+}
 }
 /* Media query ipad */
 @media screen and (min-width: 768px) {
-  #main {
-    .mainContenido {
-      .mainCards {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        .videosIframe {
-          width: 600px;
-          height: 420px;
-        }
-        .mapsIframe {
-          width: 270px;
-          height: 200px;
-        }
-        .card {
-          width: 11rem;
-        }
+#main {
+  .mainContenido {
+    .mainCards {
+      @include tipoDisplay(flex,space-evenly);
+      flex-direction: row;
+      flex-wrap: wrap;
+      .videosIframe {
+       @include tamano(600px,420px);
+      }
+      .mapsIframe {
+          @include tamano(270px,200px);
+      }
+      .card {
+        width: 11rem;
       }
     }
   }
+}
 }
 /* Media query dispositivos 800px hasta 1024px */
 @media screen and (min-width: 800px) {
-  #main {
-    .mainContenido {
-      .mainCards {
-        .card {
-          width: 12rem;
-        }
-        .mapsIframe {
-          width: 280px;
-          height: 210px;
-        }
+#main {
+  .mainContenido {
+    .mainCards {
+      .card {
+        width: 12rem;
+      }
+      .mapsIframe {
+          @include tamano(280px,210px);
       }
     }
   }
 }
+}
 @media screen and (min-width: 1024px) {
-  #main {
-    .mainContenido {
-      .mainCards {
-        .mapsIframe {
-          width: 290px;
-          height: 220px;
-        }
-        .card {
-          width: 14rem;
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-        .videosIframe {
-          width: 300px;
-          height: 220px;
-        }
+#main {
+  .mainContenido {
+    .mainCards {
+      .mapsIframe {
+          @include tamano(290px,220px);
+      }
+      .card {
+        width: 14rem;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .videosIframe {
+          @include tamano(300px,220px);
       }
     }
   }
-  #contact {
-    display: none;
-  }
+}
+#contact {
+  display: none;
+}
 }
 /* Transiciones */
 /* Transiciones */
 /* Transiciones a partir de dispositivos de 1200px (Desktops o notebooks) */
-@media screen and (min-width: 1200px) {
-  .card,
-  .categorias,
-  header,
-  footer,
-  .footerLinks,
-  iframe,
-  .iconos {
-    transition: all 0.2s;
-  }
-  header {
-    &:hover {
-      background-color: rgba(146, 146, 146, 0.493);
-    }
-  }
-  #main {
-    .mainContenido {
-      .categorias:hover {
-        letter-spacing: 2px;
-      }
-      .mainCards {
-        .videosIframe {
-          width: 340px;
-          height: 250px;
-        }
-        .card:hover {
-          background-color: rgba(77, 76, 76, 0.932);
-          transform: translateY(-2px);
-        }
-        iframe:hover {
-          transform: translateY(-2px);
-        }
-      }
-    }
-  }
-  footer:hover {
-    background-color: rgb(46, 46, 46);
-  }
-  .footerLinks:hover {
-    color: antiquewhite !important;
-    text-shadow: 0px 0px 1px #ffffffc9;
-  }
-  .iconos:hover {
-    transform: translateY(-2px);
+@media screen and (min-width: map-get($tamanosGenerales,header)) {
+.card,
+.categorias,
+header,
+footer,
+.footerLinks,
+iframe,
+.iconos {
+  transition: all 0.2s;
+}
+header {
+  &:hover {
+    background-color: rgba(146, 146, 146, 0.493);
   }
 }
-@media screen and (min-width: 1280px) {
-  #main {
-    .mainContenido {
-      width: 1200px;
-      .mainCards {
-        .mapsIframe {
-          width: 380px;
-        }
-        .videosIframe {
-          width: 360px;
-          height: 290px;
-        }
+#main {
+  .mainContenido {
+    .categorias:hover {
+      letter-spacing: 2px;
+    }
+    .mainCards {
+      .videosIframe {
+          @include tamano(340px,250px);
       }
-      .redes {
-        height: 50px;
-        width: 400px;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 35px;
-        margin-bottom: 35px;
+      iframe:hover {
+        transform: translateY(-2px);
       }
+      .card:hover {
+        background-color: rgba(77, 76, 76, 0.932);
+        //Extend, me fue dificil hacer un extend, no tengo tantas propiedades iguales a copiar.
+        @extend iframe:hover;
+      }
+
     }
   }
-  #linkIndex {
-    margin-top: 20px;
-    margin-bottom: 20px;
+}
+footer:hover {
+  background-color: rgb(46, 46, 46);
+}
+.footerLinks:hover {
+  color: antiquewhite !important;
+  text-shadow: 0px 0px 1px #ffffffc9;
+}
+.iconos:hover {
+  transform: translateY(-2px);
+}
+}
+@media screen and (min-width: 1280px) {
+#main {
+  .mainContenido {
+    width: map-get($tamanosGenerales,header);
+    .mainCards {
+      .mapsIframe {
+        width: 380px;
+      }
+      .videosIframe {
+          @include tamano(360px,290px);
+      }
+    }
+    .redes {
+      @include tipoDisplay(flex,space-evenly);
+      @include tamano(400px,50px);
+      @include topBottom(35px,35px);
+    }
   }
+}
+#linkIndex {
+    @include topBottom(20px,20px);
+}
 }
