@@ -1,6 +1,1 @@
-27/2/22 22:12hs: 
-
-*Se corrigieron errores con boostrap.
-*Carpetas de más, borradas.
-*Se incluyeron mixins, maps, map-get y extend.
 *Se modificaron titles, se añadieron descripciónes y keywords.

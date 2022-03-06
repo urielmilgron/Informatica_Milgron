@@ -69,19 +69,10 @@ header .navMaster {
 
 #main .mainContenido .mainCards .card {
   width: 15.5rem;
-  height: 480px;
+  height: 420px;
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: rgba(75, 75, 75, 0.452);
-}
-
-#main .mainContenido .mainCards .card .card-text {
-  color: rgba(189, 189, 189, 0.856);
-  height: 90px;
-}
-
-#main .mainContenido .mainCards .card .precio {
-  height: 20px;
 }
 
 #main .mainContenido .mainCards .card .imagen {
@@ -91,7 +82,7 @@ header .navMaster {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 160px;
+  min-height: 150px;
   min-width: 160px;
   vertical-align: middle;
 }
@@ -105,9 +96,19 @@ header .navMaster {
   vertical-align: middle;
 }
 
-#main .mainContenido .mainCards .card .btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
+#main .mainContenido .mainCards .card .card-body .card-text {
+  color: rgba(189, 189, 189, 0.856);
+  height: 60px;
+}
+
+#main .mainContenido .mainCards .card .card-body .precio {
+  height: 20px;
+  color: #d6d5d8;
+}
+
+#main .mainContenido .mainCards .card .card-body .btn {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #main .mainContenido .mainCards .formulario {
@@ -176,6 +177,10 @@ footer #contact a:active {
   }
   #main .mainContenido .mainCards .card {
     width: 11rem;
+    height: auto;
+  }
+  #main .mainContenido .mainCards .card .card-text {
+    height: 50px;
   }
 }
 
