@@ -47,9 +47,19 @@ header .navMaster {
   height: 10%;
 }
 
-#main .mainContenido .categorias {
+#main .mainContenido .divCategorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .mainContenido .divCategorias .categorias {
   margin-top: 20px;
   color: #dadada;
+  width: 250px;
 }
 
 #main .mainContenido .mainCards {
@@ -135,6 +145,11 @@ header .navMaster {
 #main .mainContenido .divRedes .redes {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+#main .mainContenido #linkIndex {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -224,7 +239,8 @@ footer #contact a:active {
   footer,
   .footerLinks,
   iframe,
-  .iconos {
+  .iconos,
+  .linkIndex {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
   }
@@ -244,6 +260,9 @@ footer #contact a:active {
   }
   #main .mainContenido .mainCards .card:hover {
     background-color: rgba(77, 76, 76, 0.932);
+  }
+  #main .mainContenido #linkIndex a:hover {
+    letter-spacing: 2px;
   }
   footer:hover {
     background-color: #2e2e2e;

@@ -51,10 +51,20 @@ header {
       }
     }
     /* Encabezados */
-    .categorias {
-      margin-top: map-get($tamanosGenerales, tamanoDifUsos);
-      color: rgb(218, 218, 218);
+    .divCategorias{
+      @include tipoDisplay(flex, center);
+      .categorias{
+        margin-top: map-get($tamanosGenerales, tamanoDifUsos);
+        color: rgb(218, 218, 218);
+        width: 250px;
+      }
     }
+    // .categorias {
+    //   background-color: aqua;
+    //   margin-top: map-get($tamanosGenerales, tamanoDifUsos);
+    //   color: rgb(218, 218, 218);
+    //   width: 500px;
+    // }
     /* Contenedores de las cards */
     .mainCards {
       display: flex;
@@ -105,6 +115,9 @@ header {
         @include topBottom(10px, 10px);
       }
     }
+    #linkIndex{
+      @include topBottom(20px, 20px);
+  }
   }
 }
 footer {
@@ -175,6 +188,7 @@ footer {
           @include tamano(300px, 220px);
         }
       }
+
     }
   }
   #contact {
@@ -191,7 +205,8 @@ footer {
   footer,
   .footerLinks,
   iframe,
-  .iconos {
+  .iconos,
+  .linkIndex {
     transition: all 0.2s;
   }
   header {
@@ -216,6 +231,13 @@ footer {
           //Extend, me fue dificil hacer un extend, no tengo tantas propiedades iguales a copiar.
           @extend iframe:hover;
         }
+      }
+      #linkIndex{
+        a{
+          &:hover{letter-spacing: 2px;
+          }
+        }
+        
       }
     }
   }
